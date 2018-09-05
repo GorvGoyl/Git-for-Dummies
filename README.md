@@ -141,6 +141,22 @@ git add -i
 
 		git stash pop
 ---	
+## git Users
+### Set
+
+	git config --local user.name "localuser"
+	git config --local user.email "localuser@example.com"
+	git config --global user.name "globaluser"
+	git config --global user.email "globaluser@example.com"
+
+### Get
+	git config --local user.name
+	git config --local user.email
+	git config --global user.name
+	git config --global user.email
+
+	git config --list
+---
 ### Download big repository on poor bandwidth: 
 * https://stackoverflow.com/questions/34389446/how-do-i-download-a-large-git-repository/52090961#52090961
 
