@@ -65,16 +65,18 @@ git push upstream/some_branch
 	```
 	git checkout branch_name
 	```
-* Status of remote - local - origin branches tracking
-	```
-	git branch -vv
-	```
-	```
-	git remote show origin
-	```
-	```
-	git status
-	```
+### Status of remote - local - origin branches tracking
+	git remote -v
+```
+git branch -vv
+```
+
+```
+git remote show origin
+```
+```
+git status
+```
 ---
 ## Create Pull Request
 * for can-menifest:
@@ -95,11 +97,12 @@ git push upstream/some_branch
 ```
 git add -i
 ```
-### show latest commits (to exit type q)
+-  show latest commits (to exit type q)
 
-	git log
-### Display current branch
-	git branch
+		git log
+- Display current branch
+
+		git branch
 ---
 ## Built-in git GUI
 	gitk
