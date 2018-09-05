@@ -27,6 +27,10 @@ git add -i (interactive add/revert)
 ```
 git commit -m 'fixed this and that'
 ```
+### Git add & commit in one line (if there's no new file created)
+	git commit -a -m 'fixed this and that'
+	or
+	git commit -am "fixed this and that"
 ---
 ## Push/Pull (Get latest changes)
 ```
