@@ -163,14 +163,39 @@ git add -i
 ---
 ## Remember Me
 ### Remember username & password
-(username & password stored in plain-text in `%UserProfile%\.git-credentials`)
+1) Secured Way  (Store globally)
 
-	git config credential.helper store
-	git push http://example.com/repo.git
-	Username: <type your username once>
-	Password: <type your password once>
-	
-	remove credentials: git config --unset credential.helper
+		git config --global credential.helper manager //secured way for Windows
+
+		git push http://example.com/repo.git
+		Username: <type your username once>
+		Password: <type your password once>
+
+2) Unsecured way (Store globally)
+
+		git config credential.helper store //username & password stored in plain-text in "%UserProfile%\.git-credentials"
+		git push http://example.com/repo.git
+		Username: <type your username once>
+		Password: <type your password once>
+
+3) Unsecured way (Store locally per repo)
+
+		//saved in file 'cred' inside repo .git folder. Need to manually delete it.
+		git config credential.helper 'store --file=.git/cred'
+
+4) Secured Way (Store in Cache)
+   
+		git config credential.helper 'cache --timeout=864000' // 10 days expiry
+		git credential-cache exit // remove it from cache before timeout
+
+
+### Remove credentials
+	git config --unset credential.helper
+	git config --local --unset credential.helper
+	git config --global --unset credential.helper
+	git config --system --unset credential.helper
+	//Windows: delete from Control Panel\User Accounts\Credential Manager
+
 ---
 ### Download big repository on poor bandwidth: 
 * https://stackoverflow.com/questions/34389446/how-do-i-download-a-large-git-repository/52090961#52090961
