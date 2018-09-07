@@ -161,6 +161,17 @@ git add -i
 
 	git config --list
 ---
+## Remember Me
+### Remember username & password
+(username & password stored in plain-text in `%UserProfile%\.git-credentials`)
+
+	git config credential.helper store
+	git push http://example.com/repo.git
+	Username: <type your username once>
+	Password: <type your password once>
+	
+	remove credentials: git config --unset credential.helper
+---
 ### Download big repository on poor bandwidth: 
 * https://stackoverflow.com/questions/34389446/how-do-i-download-a-large-git-repository/52090961#52090961
 
