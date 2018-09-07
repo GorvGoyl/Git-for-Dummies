@@ -4,19 +4,19 @@
 * local - your repo stored in PC
 * remote repository - your repo available on github, bitbucket
 * origin - origin is remote from where you have did `git clone`
-* upstream - upstream is their main repo from which you have forked, useful to get latest changes from their repo.
+* upstream - upstream is their main repo from which you have forked, useful to get latest changes from their repo.releases
 * tag - used for software releases
 * master - it's a branch named master (default created branch for new repo)
 * pull - get latest changes, remote branches and then move HEAD to latest commit (`git pull` = `git fetch` + `git merge`)
 * HEAD - head always refers to the latest commit on your current branch.
-* fetch - just download latest changes in separate path and do not intigrate with your repo. `git merge` is required to intigrate these changes
+* fetch - just download latest changes in separate path and do not integrate with your repo. `git merge` is required to integrate these changes
 ---
 ## Stage & Commit
 ```
 git add . (stage ALL new,modified files)
 ```
 ```
-git add -a (stage ALL new,modfied,deleted files)
+git add -a (stage ALL new,modified,deleted files)
 ```
 ```
 git add file1.txt file2.txt file3.txt
@@ -60,7 +60,7 @@ git push upstream/some_branch
 	```
 	git branch -d feature_x
 	```
-* push newly created branch to remote (branch is not available to github.com unless you push it seperately)
+* push newly created branch to remote (branch is not available to github.com unless you push it separately)
 	```
 	git push origin feature_x
 	```
@@ -117,7 +117,7 @@ git add -i
 	git config color.ui true
 ---
 ## Resolve Merge Conflicts:
-- revert all our changes and pull latest from upstream (thier repo):
+- revert all our changes and pull latest from upstream (their repo):
   
 		git reset --hard HEAD
 		git pull -s recursive -X theirs upstream branch_remote  
@@ -129,7 +129,7 @@ git add -i
 	git reset --hard origin/master
 ---
 ## Git pull without committing local changes
-* hide your local uncommited changes temporarily
+* hide your local uncommitted changes temporarily
   
 		git stash
 
@@ -140,7 +140,7 @@ git add -i
 
 		git pull
 
-* now unhide your local uncommited changes  
+* now unhide your local uncommitted changes  
   (`pop` will restore only latest stash)
 
 		git stash pop
@@ -174,6 +174,10 @@ git add -i
 ---
 ### Download big repository on poor bandwidth: 
 * https://stackoverflow.com/questions/34389446/how-do-i-download-a-large-git-repository/52090961#52090961
+
+### HTTPS Clone repo vs SSH Clone repo
+* HTTPS Clone - easier, works through firewalls & proxies, ask password everytime for push-pull (but password can be saved using `git config credential.helper store`)
+* SSH Clone - manually create SSH key & add it to github, password not required for push-pull. Remove key from github to revoke authorization for that PC.
 
 ### markdown cheatsheet:
 - https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
