@@ -1,5 +1,5 @@
 # Git for Dummies
-### what means what
+## what means what?
 * remote - remote means server like github, bitbucket
 * local - your repo stored in PC
 * remote repository - your repo available on github, bitbucket
@@ -11,7 +11,7 @@
 * HEAD - head always refers to the latest commit on your current branch.
 * fetch - just download latest changes in separate path and do not integrate with your repo. `git merge` is required to integrate these changes
 ---
-## Stage & Commit
+# Stage & Commit
 ```
 git add . (stage ALL new,modified files)
 ```
@@ -32,7 +32,7 @@ git commit -m 'fixed this and that'
 	or
 	git commit -am "fixed this and that"
 ---
-## Push/Pull (Get latest changes)
+# Push/Pull (Get latest changes)
 ```
 git push origin
 ```
@@ -43,7 +43,7 @@ git push upstream
 git push upstream/some_branch
 ```
 ---
-## Branch
+# Branch
 * Add Remote branch (origin is your repo on github.com)
 	```
 	git remote add origin https://github.com/user/repo.git
@@ -96,7 +96,7 @@ git status
 * https://hub.github.com/hub-pull-request.1.html
 ---
 
-## Status
+# Repo Status
 	git status
 ```
 git add -i
@@ -108,26 +108,35 @@ git add -i
 
 		git branch
 ---
+# Git GUI
+
 ## Built-in git GUI
 	gitk
 ## Git interactive commands
 	git add -i
-### use colorful git output
+## use colorful git output
   
 	git config color.ui true
 ---
+
+# I f**ked up
+
 ## Resolve Merge Conflicts:
 - revert all our changes and pull latest from upstream (their repo):
   
 		git reset --hard HEAD
 		git pull -s recursive -X theirs upstream branch_remote  
----
+
 ## Revert all local changes and local commits
 (fetch the latest history from the server and point your local master branch at it )
 
 	git fetch origin
 	git reset --hard origin/master
----
+
+## Revert everything I did & make repo sync with upstream
+	git reset --hard upstream/master
+	git pull upstream master
+
 ## Git pull without committing local changes
 * hide your local uncommitted changes temporarily
   
@@ -145,15 +154,15 @@ git add -i
 
 		git stash pop
 ---	
-## git Users
-### Set
+# git Users
+## Set
 
 	git config --local user.name "localuser"
 	git config --local user.email "localuser@example.com"
 	git config --global user.name "globaluser"
 	git config --global user.email "globaluser@example.com"
 
-### Get
+## Get
 	git config --local user.name
 	git config --local user.email
 	git config --global user.name
@@ -161,8 +170,8 @@ git add -i
 
 	git config --list
 ---
-## Remember Me
-### Remember username & password
+# Remember Me
+## Remember username & password
 1) Secured Way  (Store globally)
 
 		git config --global credential.helper manager //secured way for Windows
@@ -180,7 +189,7 @@ git add -i
 
 3) Unsecured way (Store locally per repo)
 
-		//saved in file 'cred' inside repo .git folder. Need to manually delete it.
+		//saved in file 'cred' inside repo .git folder. Need to manually delete this file.
 		git config credential.helper 'store --file=.git/cred'
 
 4) Secured Way (Store in Cache)
@@ -189,7 +198,7 @@ git add -i
 		git credential-cache exit // remove it from cache before timeout
 
 
-### Remove credentials
+## Remove credentials
 	git config --unset credential.helper
 	git config --local --unset credential.helper
 	git config --global --unset credential.helper
@@ -197,7 +206,7 @@ git add -i
 	//Windows: delete from Control Panel\User Accounts\Credential Manager
 
 ---
-### Download big repository on poor bandwidth: 
+## Download big repository on poor bandwidth: 
 * https://stackoverflow.com/questions/34389446/how-do-i-download-a-large-git-repository/52090961#52090961
 
 ### HTTPS Clone repo vs SSH Clone repo
