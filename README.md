@@ -140,7 +140,7 @@ git add -i
 ## Git pull without committing local changes
 * hide your local uncommitted changes temporarily
   
-		git stash
+		git stash --all
 
 	* show all stashes
   
