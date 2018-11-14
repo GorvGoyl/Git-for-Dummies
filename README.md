@@ -52,9 +52,9 @@ git push upstream/some_branch
 	```
 	git remote add upstream https://github.com/their_user/repo.git
 	```
-* Create Branch "feature_x" and switch to it
+* Create new local version branch of an upstream branch
 	```
-	git checkout -b feature_x
+	git checkout -b feature_x upstream/master
 	```
 * delete the branch
 	```
