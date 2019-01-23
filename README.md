@@ -42,6 +42,9 @@ git push upstream
 ```
 git push upstream/some_branch
 ```
+```
+git pull origin/master (pull latest changes from remote master branch into local dev branch)
+```
 ---
 # Branch
 * Add Remote branch (origin is your repo on github.com)
