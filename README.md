@@ -43,7 +43,10 @@ git push upstream
 git push upstream/some_branch
 ```
 ```
-git merge origin/master (pull latest changes from remote master branch into local dev branch)
+git push origin HEAD (push local changes to remote branch with same name)
+```
+```
+git pull origin master (pull latest changes from remote master branch into local dev branch)
 ```
 ---
 # Branch
