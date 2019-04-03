@@ -60,7 +60,7 @@ git pull origin master (pull latest changes from remote master branch into local
 	```
 * Create new local version branch of an upstream branch
 	```
-	git checkout -b feature_x upstream/master
+	git checkout -b feature_x upstream/master (master is the branch name)
 	```
 * delete the branch
 	```
@@ -77,9 +77,6 @@ git pull origin master (pull latest changes from remote master branch into local
 	```
 ### Status of remote - local - origin branches tracking
 	git remote -v
-```
-git branch -vv
-```
 
 ```
 git remote show origin
@@ -138,10 +135,10 @@ git add -i
 (fetch the latest history from the server and point your local master branch at it )
 
 	git fetch origin
-	git reset --hard origin/master
+	git reset --hard origin/master (master is the branch name)
 
 ## Revert everything I did & make repo sync with upstream
-	git reset --hard upstream/master
+	git reset --hard upstream/master (master is the branch name)
 	git pull upstream master
 
 ## Git pull without committing local changes
