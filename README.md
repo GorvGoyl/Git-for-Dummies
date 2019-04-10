@@ -146,7 +146,7 @@ git add -i
 
 ## Clean up a fork and restart it from the upstream
 	git reset --hard upstream/master (master is the branch name of original repo)
-	git push origin my_branch --force
+	git push origin my_branch --force (or git push origin HEAD --force)
 	
 ## Git pull without committing local changes
 * hide your local uncommitted changes temporarily
