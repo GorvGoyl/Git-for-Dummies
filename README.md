@@ -144,6 +144,10 @@ git add -i
 	git reset --hard upstream/master (master is the branch name)
 	git pull upstream master
 
+## Clean up a fork and restart it from the upstream
+	git reset --hard upstream/master (master is the branch name of original repo)
+	git push origin my_branch --force
+	
 ## Git pull without committing local changes
 * hide your local uncommitted changes temporarily
   
