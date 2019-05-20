@@ -16,7 +16,7 @@
 git add . (stage ALL new,modified files)
 ```
 ```
-git add -a (stage ALL new,modified,deleted files)
+git add -A (stage ALL new,modified,deleted files)
 ```
 ```
 git add file1.txt file2.txt file3.txt
