@@ -53,6 +53,14 @@ git pull origin master (pull latest changes from remote master branch into local
 ```
 ---
 # Branch
+* create local branch (code will be copied from current branch ~master)
+	```
+	git checkout -b feature_x
+	```
+* push newly created branch to remote (branch is not available to github.com unless you push it separately)
+	```
+	git push origin feature_x
+	```
 * Add Remote branch (origin is your repo on github.com)
 	```
 	git remote add origin https://github.com/user/repo.git
@@ -65,18 +73,13 @@ git pull origin master (pull latest changes from remote master branch into local
 	```
 	git checkout -b feature_x upstream/master (master is the branch name)
 	```
+* Switch branch
+	```
+	git checkout feature_x
+	```
 * delete the branch
 	```
 	git branch -d feature_x
-	```
-* push newly created branch to remote (branch is not available to github.com unless you push it separately)
-	```
-	git push origin feature_x
-	```
-* Switch branch
-
-	```
-	git checkout branch_name
 	```
 ### Status of remote - local - origin branches tracking
 	git remote -v
