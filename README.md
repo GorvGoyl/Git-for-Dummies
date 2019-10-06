@@ -139,9 +139,13 @@ git add -i
   
 		git reset --hard HEAD
 		git pull -s recursive -X theirs upstream branch_remote  
-## Revert last commit and keep the changes
+## Revert last commit and keep the changes (local)
 	git reset HEAD^
-## Revert all local changes and local commits
+## Revert last remote commit (from remote, untracable)
+	git pull #to get that commit to local
+	git reset HEAD^ #remove commit locally
+	git push origin +HEAD #force-push the last HEAD commit to remote
+## Revert all local changes and local commits (local)
 (fetch the latest history from the server and point your local master branch at it )
 
 	git fetch origin
