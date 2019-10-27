@@ -27,6 +27,12 @@ git add -i (interactive add/revert)
 ```
 git commit -m 'fixed this and that'
 ```
+### Git append (commit using last commit msg)
+	git commit --reuse-message=HEAD
+	_(make shortcut: add,append,push; run once in terminal)_
+	git config --global alias.append '!f() { git add -A && git commit --reuse-message=HEAD && git push; }; f' (run once)
+	git append (use it like this)
+
 ### Git add+commit (1 line, if there's no new file created)
 	git commit -am "fixed this and that"
 	
@@ -34,7 +40,7 @@ git commit -m 'fixed this and that'
 	git add -A ; git commit -m "Your Message" (powershell)
 	git add -A && git commit -m "Your Message" (bash)
 	
-### Git add+commit+push (1 line, add newly created files also, run it once to create alias in .gitconfig)
+### Git add+commit+push (1 line, stage newly created files also, run it once to create alias in .gitconfig)
 	git config --global alias.lazy '!f() { git add -A && git commit -m "$@" && git push; }; f' (run once)
 	git lazy "fixed bugs" (use it like this)
 	
