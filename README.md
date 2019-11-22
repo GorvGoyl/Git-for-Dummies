@@ -69,7 +69,7 @@ git pull origin master (pull latest changes from remote master branch into local
 	```
 * push newly created branch to remote (branch is not available to github.com unless you push it separately)
 	```
-	git push origin feature_x
+	git push --set-upstream origin feature_x
 	```
 * Add Remote branch (origin is your repo on github.com)
 	```
