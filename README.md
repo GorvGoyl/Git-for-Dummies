@@ -219,17 +219,19 @@ revert all our changes and pull latest from upstream \(their repo\):
 
 **Revert last commit and keep the changes \(local\)**
 
-git reset HEAD^
+`git reset HEAD^`
 
 **Revert last remote commit \(from remote, untracable\)**
 
-git pull \#to get that commit to local git reset HEAD^ \#remove commit locally git push origin +HEAD \#force-push the last HEAD commit to remote
+`git pull #to get that commit to local   
+git reset HEAD^ #remove commit locally   
+git push origin +HEAD #force-push the last HEAD commit to remote`
 
 **Revert all local changes and local commits \(local\)**
 
 \(fetch the latest history from the server and point your local master branch at it \)
 
-git fetch origin git reset --hard origin/master \(master is the branch name\)
+`git fetch origin git reset --hard origin/master (master is the branch name)`
 
 ### Revert everything I did & make repo sync with upstream
 
