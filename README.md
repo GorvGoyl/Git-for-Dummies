@@ -88,6 +88,14 @@ git push origin HEAD (push local changes to remote branch with same name)
 git pull origin master (pull latest changes from remote master branch into local dev branch)
 ```
 
+## untrack & remove pushed files
+
+1. add those to .gitignore
+2. git rm -r --cached . 
+3. git add .
+4. git commit -am "Remove ignored files"
+5. git push
+
 ## Branch
 
 * create local branch \(code will be copied from current branch ~master\)
@@ -187,6 +195,8 @@ git add -i
   ```
 
 ## Git GUI
+
+use fork app on windows
 
 ### Built-in git GUI
 
