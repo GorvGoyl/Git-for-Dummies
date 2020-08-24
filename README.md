@@ -96,6 +96,12 @@ git pull origin master (pull latest changes from remote master branch into local
 4. git commit -am "Remove ignored files"
 5. git push
 
+## remove untracked files from local and server
+(which persist even after adding to .gitignore)
+```text
+git rm -r --cached . && git add . && git commit -am "Remove ignored files" && git push
+```
+
 ## Branch
 
 * create local branch \(code will be copied from current branch ~master\)
