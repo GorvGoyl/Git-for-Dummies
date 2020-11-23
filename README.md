@@ -90,6 +90,15 @@ git pull origin master (pull latest changes from remote master branch into local
 * delete the branch
 	```
 	git branch -d feature_x
+
+	```
+* show origin (repo/branch URL on github)
+	```
+	git remote show origin
+	```
+* change origin (link to different repo URL on github)
+	```
+	git remote set-url origin new.git.url
 	```
 ### Status of remote - local - origin branches tracking
 	git remote -v
