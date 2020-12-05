@@ -157,6 +157,23 @@ git rm -r --cached . && git add . && git commit -am "Remove ignored files" && gi
   ```
   git remote set-url origin new.git.url
   ```
+  
+ - Clone uncommited changes to new branch
+ make copy of changes in current A branch stack
+ ```
+ git stash -u
+ git stash apply
+ ```
+ carry these changes to new branch and do your work
+ ```
+ git checkout -b new_branch
+ ```
+ To see uncommited changes on previous A branch
+ ```
+ git checkout A
+ git stash apply // or if you've made stash in some other branch: `git stash list` and then use correct number: `git stash apply 2`
+ ```
+ 
 
 ### Status of remote - local - origin branches tracking
 
