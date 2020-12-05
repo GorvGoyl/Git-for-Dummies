@@ -294,7 +294,7 @@ git push origin my_branch --force (or git push origin HEAD --force)
 - hide your local uncommitted changes temporarily
 
   ```text
-    git stash --all
+    git stash --include-untracked // shorthand git stash -u
   ```
 
   - show all stashes
@@ -315,6 +315,11 @@ git push origin my_branch --force (or git push origin HEAD --force)
   ```text
     git stash pop
   ```
+  or 
+  ```text
+  git stash apply
+  ```
+  `git stash pop` restore changes and also removes it from stack, `git stash apply` restores it but still keeps it on stack for possible later reuse (or you can then `git stash drop` it). So `git stash pop` is `git stash apply` && `git stash drop`
 
 ## git Users
 
